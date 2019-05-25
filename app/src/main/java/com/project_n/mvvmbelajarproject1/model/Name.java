@@ -14,4 +14,6 @@ public class Name implements Serializable {
 
     @SerializedName("last")
     public String last;
+
+
 }

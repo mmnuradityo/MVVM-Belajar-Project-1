@@ -23,8 +23,8 @@ public class ItemPeopleViewModel extends BaseObservable {
 
     public String getFullName() {
         people.fullName =
-                people.name.title = ".", people.name.first = " ", people.name.last;
-        return people.name;
+                people.name.title + "." + people.name.first + " " + people.name.last;
+        return people.fullName;
     }
 
     public String getCell() {

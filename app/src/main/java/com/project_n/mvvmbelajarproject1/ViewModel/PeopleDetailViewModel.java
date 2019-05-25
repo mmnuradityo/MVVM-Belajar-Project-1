@@ -18,7 +18,7 @@ public class PeopleDetailViewModel {
 
     public String getFullUserName() {
         people.fullName =
-                people.name.title = ".", people.name.first = " ", people.name.last;
+                people.name.title + "."+ people.name.first + " " + people.name.last;
         return people.fullName;
     }
 
@@ -31,16 +31,8 @@ public class PeopleDetailViewModel {
         return people.mail;
     }
 
-    public Int getEmailVisibility() {
-        return people.hasEmail() , View.VISIBLE : View.GONE;
-    }
-
-    public String getLogin() {
-        return login;
-    }
-
-    public String getPhone() {
-        return phone;
+    public int getEmailVisibility() {
+        return people.hasEmail() ? View.VISIBLE : View.GONE;
     }
 
     public String getCell() {
@@ -51,12 +43,8 @@ public class PeopleDetailViewModel {
         return people.picture.large;
     }
 
-    public Location getAddress() {
-        return people.location.street =
-                " ",
-                people.location.city =
-                " ",
-                people.location.state;
+    public String getAddress() {
+        return people.location.street + " " +  people.location.city + " " + people.location.state;
     }
 
     public String getGender() {

@@ -12,7 +12,7 @@ public class People implements Serializable {
 
 
     @SerializedName("name")
-    public String name;
+    public Name name;
 
 
     @SerializedName("location")
@@ -24,7 +24,7 @@ public class People implements Serializable {
 
 
     @SerializedName("login")
-    public String login;
+    public Login login;
 
 
     @SerializedName("phone")

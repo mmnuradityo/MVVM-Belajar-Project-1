@@ -7,6 +7,8 @@ import android.support.v4.util.Consumer;
 import android.view.View;
 
 import com.project_n.mvvmbelajarproject1.R;
+import com.project_n.mvvmbelajarproject1.data.PeopleResponse;
+import com.project_n.mvvmbelajarproject1.data.PeopleService;
 import com.project_n.mvvmbelajarproject1.model.People;
 
 import java.util.ArrayList;
@@ -51,8 +53,8 @@ public class PeopleViewModel extends Observable {
 
     private void fetchPeopleList() {
 
-        PeopleApplication peopleApplication = new PeopleApplication.create(context);
-        PeopleService peopleService  = new PeopleService.getPeopleService();
+        PeopleApplication peopleApplication = PeopleApplication.create(context);
+        PeopleService peopleService  = PeopleService.getPeopleService();
 
         Disposable disposable = peopleService.fetchPeople(10, "en")
                 .subscribeOn(peopleApplication.subscribeScheduler())
